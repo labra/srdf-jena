@@ -14,11 +14,13 @@ scalaVersion := "2.11.7"
 publishMavenStyle := true
 
 libraryDependencies ++= Seq(
-  , "org.scala-lang" % "scala-compiler" % scalaVersion.value 
+    "org.scala-lang" % "scala-compiler" % scalaVersion.value 
   , "org.apache.jena" % "jena-arq" % "2.13.0"
   , "junit" % "junit" % "4.10" % "test"
   , "org.scalatest" %% "scalatest" % "2.2.6" % "test"
+  , "org.rogach" %% "scallop" % "0.9.5"
   , "es.weso" % "srdf-jvm_2.11" % "0.0.4"
+  , "es.weso" % "turtleparser-jvm_2.11" % "0.0.5"
   )
 
 autoCompilerPlugins := true
