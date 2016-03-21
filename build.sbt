@@ -7,9 +7,9 @@ organization := "es.weso"
 
 name := "srdf-jena"
 
-version := "0.0.1"
+version := "0.0.3"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
 publishMavenStyle := true
 
@@ -19,7 +19,7 @@ libraryDependencies ++= Seq(
   , "junit" % "junit" % "4.10" % "test"
   , "org.scalatest" %% "scalatest" % "2.2.6" % "test"
   , "org.rogach" %% "scallop" % "0.9.5"
-  , "es.weso" % "srdf-jvm_2.11" % "0.0.6"
+  , "es.weso" % "srdf-jvm_2.11" % "0.0.7"
   , "es.weso" % "turtleparser-jvm_2.11" % "0.0.5"
   )
 
