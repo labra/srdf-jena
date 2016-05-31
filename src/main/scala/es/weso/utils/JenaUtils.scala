@@ -1,28 +1,28 @@
 package es.weso.utils
 
-import com.hp.hpl.jena.rdf.model.LiteralRequiredException
-import com.hp.hpl.jena.rdf.model.Model
-import com.hp.hpl.jena.rdf.model.ModelFactory
-import com.hp.hpl.jena.rdf.model.Resource
-import com.hp.hpl.jena.rdf.model.ResourceRequiredException
-import com.hp.hpl.jena.rdf.model.Statement
+import org.apache.jena.rdf.model.LiteralRequiredException
+import org.apache.jena.rdf.model.Model
+import org.apache.jena.rdf.model.ModelFactory
+import org.apache.jena.rdf.model.Resource
+import org.apache.jena.rdf.model.ResourceRequiredException
+import org.apache.jena.rdf.model.Statement
 import java.io.InputStreamReader
 import java.io.ByteArrayInputStream
-import com.hp.hpl.jena.query.Query
-import com.hp.hpl.jena.query.QueryExecutionFactory
-import com.hp.hpl.jena.query.QueryFactory
+import org.apache.jena.query.Query
+import org.apache.jena.query.QueryExecutionFactory
+import org.apache.jena.query.QueryFactory
 import java.io.StringWriter
-import com.hp.hpl.jena.rdf.model.RDFNode
-import com.hp.hpl.jena.rdf.model.Property
+import org.apache.jena.rdf.model.RDFNode
+import org.apache.jena.rdf.model.Property
 import java.net.URI
 import java.net.URL
 import java.io.InputStream
 import java.io.FileOutputStream
 import org.apache.jena.atlas.AtlasException
 import org.apache.jena.riot.RiotException
-import com.hp.hpl.jena.query.ResultSet
-import com.hp.hpl.jena.rdf.model.Literal
-import com.hp.hpl.jena.rdf.model.ResourceFactory
+import org.apache.jena.query.ResultSet
+import org.apache.jena.rdf.model.Literal
+import org.apache.jena.rdf.model.ResourceFactory
 import util.{Try, Success => TrySuccess, Failure => TryFailure}
 import scala.collection.JavaConverters._
 

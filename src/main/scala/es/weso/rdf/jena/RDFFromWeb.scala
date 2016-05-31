@@ -1,6 +1,6 @@
 package es.weso.rdf.jena
 
-import com.hp.hpl.jena.query._
+import org.apache.jena.query._
 import es.weso.rdf.nodes._
 import es.weso.rdf.nodes.RDFNode
 import es.weso.rdf.triples.RDFTriple
@@ -8,18 +8,18 @@ import scala.collection.JavaConversions._
 import scala.collection.immutable.StringOps._
 import scala.util.Try
 import es.weso.rdf.triples._
-import com.hp.hpl.jena.rdf.model.{ RDFNode => JenaRDFNode }
-import com.hp.hpl.jena.rdf.model.Property
-import com.hp.hpl.jena.rdf.model.Statement
-import com.hp.hpl.jena.rdf.model.Model
+import org.apache.jena.rdf.model.{ RDFNode => JenaRDFNode }
+import org.apache.jena.rdf.model.Property
+import org.apache.jena.rdf.model.Statement
+import org.apache.jena.rdf.model.Model
 import org.slf4j._
-import com.hp.hpl.jena.rdf.model.{ RDFNode => JenaRDFNode }
+import org.apache.jena.rdf.model.{ RDFNode => JenaRDFNode }
 import org.apache.jena.riot.RDFDataMgr
-import com.hp.hpl.jena.rdf.model.ModelFactory
+import org.apache.jena.rdf.model.ModelFactory
 import es.weso.rdf._
 import es.weso.rdf.jena.SPARQLQueries._
-import com.hp.hpl.jena.rdf.model.{ RDFNode => JenaRDFNode }
-import com.hp.hpl.jena.rdf.model.{ RDFNode => JenaRDFNode }
+import org.apache.jena.rdf.model.{ RDFNode => JenaRDFNode }
+import org.apache.jena.rdf.model.{ RDFNode => JenaRDFNode }
 
 case class RDFFromWeb() extends RDFReader {
   type Rdf = RDFFromWeb

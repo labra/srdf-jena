@@ -1,7 +1,7 @@
 package es.weso.rdf.jena
 
 // import es.weso.jena.JenaConversions
-import com.hp.hpl.jena.query._
+import org.apache.jena.query._
 import es.weso.rdf.nodes._
 import es.weso.rdf.nodes.RDFNode
 import es.weso.rdf.triples.RDFTriple
@@ -10,19 +10,20 @@ import scala.collection.immutable.StringOps._
 import scala.util.Try
 import es.weso.rdf.triples._
 import es.weso.rdf._
-import com.hp.hpl.jena.rdf.model.{
+import org.apache.jena.rdf.model.{
   Model,
   Resource,
   Property,
   Statement,
   RDFNode => JenaRDFNode,
   RDFReader => JenaRDFReader,
-  StmtIterator
+  StmtIterator,
+  ModelFactory
 }
 import org.slf4j._
 import org.apache.jena.riot.{ Lang => JenaLang }
 import org.apache.jena.riot.RDFDataMgr
-import com.hp.hpl.jena.rdf.model.ModelFactory
+import org.apache.jena.rdf.model.ModelFactory
 import java.io._
 import scala.util._
 import java.io._
@@ -34,6 +35,7 @@ import es.weso.rdf.PREFIXES._
 case class RDFAsJenaModel(model: Model)
     extends RDFReader
     with RDFBuilder {
+  
   type Rdf = RDFAsJenaModel
 
   val log = LoggerFactory.getLogger("RDFAsJenaModel")
@@ -55,6 +57,12 @@ case class RDFAsJenaModel(model: Model)
     model.write(out, format)
     out.toString
   }
+  
+  def extend_rdfs: Rdf = {
+    val infModel = ModelFactory.createRDFSModel(model)
+    RDFAsJenaModel(infModel)
+  }
+
 
   // TODO: this implementation only returns subjects
   override def iris(): Set[IRI] = {

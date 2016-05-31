@@ -7,7 +7,7 @@ import org.scalatest.FunSpec
 import es.weso.rdf.triples.RDFTriple
 import es.weso.rdf.nodes._
 import es.weso.rdf.jena._
-import com.hp.hpl.jena.rdf.model.ModelFactory
+import org.apache.jena.rdf.model.ModelFactory
 import es.weso.rdf._
 import es.weso.rdf.PREFIXES._
 

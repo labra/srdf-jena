@@ -7,7 +7,7 @@ organization := "es.weso"
 
 name := "srdf-jena"
 
-version := "0.0.3"
+version := "0.0.6"
 
 scalaVersion := "2.11.8"
 
@@ -15,7 +15,7 @@ publishMavenStyle := true
 
 libraryDependencies ++= Seq(
     "org.scala-lang" % "scala-compiler" % scalaVersion.value 
-  , "org.apache.jena" % "jena-arq" % "2.13.0"
+  , "org.apache.jena" % "jena-arq" % "3.1.0"
   , "junit" % "junit" % "4.10" % "test"
   , "org.scalatest" %% "scalatest" % "2.2.6" % "test"
   , "org.rogach" %% "scallop" % "0.9.5"

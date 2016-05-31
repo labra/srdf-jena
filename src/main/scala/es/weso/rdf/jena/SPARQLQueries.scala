@@ -1,6 +1,6 @@
 package es.weso.rdf.jena
 
-import com.hp.hpl.jena.query._
+import org.apache.jena.query._
 import es.weso.rdf.nodes._
 import scala.collection.JavaConversions._
 import scala.collection.immutable.StringOps._

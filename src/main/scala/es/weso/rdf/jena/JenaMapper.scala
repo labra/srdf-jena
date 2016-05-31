@@ -1,7 +1,7 @@
 package es.weso.rdf.jena
 
 // TODO: Refactor this code 
-import com.hp.hpl.jena.rdf.model.{
+import org.apache.jena.rdf.model.{
   Model => JenaModel,
   Statement,
   StmtIterator,
@@ -13,8 +13,8 @@ import com.hp.hpl.jena.rdf.model.{
   AnonId
 }
 import es.weso.rdf.nodes._
-import com.hp.hpl.jena.datatypes.BaseDatatype
-import com.hp.hpl.jena.datatypes.xsd.XSDDatatype
+import org.apache.jena.datatypes.BaseDatatype
+import org.apache.jena.datatypes.xsd.XSDDatatype
 import es.weso.rdf.triples.RDFTriple
 import es.weso.rdf.PREFIXES._
 import scala.collection.JavaConversions._
